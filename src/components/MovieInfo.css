@@ -1,0 +1,9 @@
+#close-button {
+    background-color: #ff7256 !important;
+    border: none;
+}
+
+.movie-poster {
+   max-height: 20rem;
+   margin-bottom: 1rem;
+}

@@ -1,0 +1,35 @@
+.search-container {
+    height: 50px;
+    width: 100%;
+}
+
+.searchInput-container {
+    background-color: pink;
+}
+
+#searchInput {
+    width: 50%;
+    height: 50px;
+    border: none;
+    padding-left: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#submitBtn {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 52px;
+    width: 15%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #ff7256;
+    color: white;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+

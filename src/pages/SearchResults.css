@@ -1,0 +1,32 @@
+.results-searchbar {
+    margin: 3rem 0;
+}
+
+.movieTitle-card {
+    background-color: white;
+    border-radius: 10px;
+    margin: .8rem 10%;
+    box-shadow: 0 1px 2px 1px rgb(194, 194, 194);
+    padding: 1rem;
+    text-align: left;
+}
+
+.movieTitle-card:hover {
+    cursor: pointer;
+    color: #ff7256;
+}
+
+.movieTitle {
+    display: inline-block;
+}
+
+.movieTitle:hover {
+    /* border-bottom: 2px solid #ff7256; */
+}
+
+.results-info {
+    display: flex;
+    justify-content: space-between;
+    margin: .8rem 10%;
+    text-align: left;
+}
