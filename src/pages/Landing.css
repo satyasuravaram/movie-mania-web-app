@@ -11,6 +11,8 @@
 }
 
 .landing-header {
+    color: white;
     font-size: 2.4rem;
-    font-weight: bold;
+    font-weight: 500;
+    letter-spacing: 2px;
 }

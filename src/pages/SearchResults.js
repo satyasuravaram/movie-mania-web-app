@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import { useLocation, useHistory } from 'react-router-dom'
-import { Modal } from 'react-bootstrap'
-import { MovieInfo } from '../components/MovieInfo'
-import { SearchBar } from '../components/SearchBar'
+import { MovieInfo } from '../components/MovieInfo/MovieInfo'
+import { SearchBar } from '../components/SearchBar/SearchBar'
 import axios from 'axios'
 import './SearchResults.css'
 
 const REACT_APP_ENDPOINT = process.env.REACT_APP_ENDPOINT
 
-console.log(process.env)
 export const SearchResults = () => {
     let history = useHistory()
     const { search } = useLocation()
@@ -47,7 +45,7 @@ export const SearchResults = () => {
     }, [query, page, displayLimit])
 
     return (
-        <div>
+        <div className="searchresults-container">
             <div className="results-searchbar">
                 <SearchBar defaultValue={query}/>
             </div>
@@ -82,7 +80,7 @@ export const SearchResults = () => {
                     <div className="movieTitle">{movie.Title} ({movie.Year})</div>
                 </div>
             )) : 
-            <div>
+            <div className="noresults-div">
                 No movie results found for title: "{query}"
             </div>
             }
