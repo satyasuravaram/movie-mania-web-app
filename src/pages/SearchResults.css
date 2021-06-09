@@ -1,5 +1,10 @@
+.results-container {
+    padding: 0 0rem;
+}
+
 .results-searchbar {
-    margin: 3rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .movieTitle-card {
@@ -14,20 +19,18 @@
 
 .movieTitle-card:hover {
     cursor: pointer;
-    color: #ff7256;
+    background-color: #ff7256;
+    color: white;
+    box-shadow: none;
 }
 
 .movieTitle {
     display: inline-block;
 }
 
-.movieTitle:hover {
-    /* border-bottom: 2px solid #ff7256; */
-}
-
 .results-info {
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
     margin: .8rem 10%;
@@ -36,5 +39,6 @@
 
 .noresults-div {
     color: white;
-    font-size: 30px;
+    font-size: 20px;
+    text-align: center;
 }

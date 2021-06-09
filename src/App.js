@@ -10,8 +10,8 @@ import axios from 'axios'
 const App = () => {
   return (
     <Router>
-      <NavBar />
       <div className="App">
+        <NavBar />
         <Switch>
           <Route path="/search" component={SearchResults} />
           <Route exact path="/" component={Landing} />

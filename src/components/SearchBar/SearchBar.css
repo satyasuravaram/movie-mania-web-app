@@ -7,6 +7,10 @@
     background-color: pink;
 }
 
+.search-container {
+    text-align: center;
+}
+
 #searchInput {
     width: 50%;
     height: 50px;

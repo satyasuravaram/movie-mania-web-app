@@ -1,6 +1,10 @@
 #close-button {
-    background-color: #ff7256 !important;
+    background-color:#ff7256 ;
     border: none;
+}
+
+#close-button:hover {
+    opacity: 0.8;
 }
 
 .movie-poster {

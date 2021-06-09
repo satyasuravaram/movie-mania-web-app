@@ -5,14 +5,14 @@ import logo from '../../images/film.svg'
 
 export const NavBar = () => {
     return (
-        <Navbar className="landing-navbar" variant="dark">
-            <Navbar.Brand className="navbar-brand" href="/">
+        <Navbar id="landing-navbar" variant="dark">
+            <Navbar.Brand className="landing-navbar-brand" href="/">
             Movie Mania
             <img
                 src={logo}
                 width="40"
                 height="40"
-                className="d-inline-block align-top navbar-logo"
+                className="d-inline-block align-top landing-navbar-logo"
                 alt="logo"
             />
             </Navbar.Brand>

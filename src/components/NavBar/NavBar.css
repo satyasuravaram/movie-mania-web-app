@@ -1,13 +1,13 @@
-.landing-navbar {
-    background-color: transparent !important;
+#landing-navbar {
+    background-color: transparent;
 }
 
-.navbar-brand {
+.landing-navbar-brand {
     font-size: 30px;
     letter-spacing: 5px;
 }
 
-.navbar-logo {
+.landing-navbar-logo {
     margin-left: 10px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(149deg) brightness(104%) contrast(103%);
 }

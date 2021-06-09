@@ -23,7 +23,6 @@ export const SearchResults = () => {
     useEffect(() => {  
         const getResults = async() => {
             const response = await axios.get(`${REACT_APP_ENDPOINT}&s=${query}&page=${page}&type=movie&plot=full`)
-            console.log(response.data)
             if (response.data.Search === undefined) {
                 setResults([])
                 setTotalResults(0)
@@ -41,37 +40,41 @@ export const SearchResults = () => {
             getResults()
           else {
             setResults([])
+            setTotalResults(0)
+            setTotalResultsArr([])
           }
     }, [query, page, displayLimit])
 
     return (
-        <div className="searchresults-container">
+        <div className="results-container">
             <div className="results-searchbar">
                 <SearchBar defaultValue={query}/>
             </div>
+
             {results.length > 0 &&
-            <div className="results-info">
-                <div>
-                    Displaying results {(page-1)*10+1}-{Math.min(page*10, totalResults)} out of {totalResults}
-                </div> 
-                <div>
-                <label for="page">Page:&nbsp;</label>
-                <select 
-                onChange={(e) => {
-                    history.push(`/search?query=${query}&page=${e.target.value}`)
-                }}
-                id="page" 
-                name="page">
-                    {totalResultsArr.map((pageNum, index) => {
-                        if (page === pageNum.toString())
-                            return (<option value={pageNum} selected>{pageNum}</option>)
-                        else
-                            return (<option value={pageNum}>{pageNum}</option>)
-                    })}
-                </select>
-                </div>
-            </div>   
+                <div className="results-info">
+                    <div>
+                        Displaying results {(page-1)*10+1}-{Math.min(page*10, totalResults)} out of {totalResults}
+                    </div> 
+                    <div>
+                        <label for="page">Page:&nbsp;</label>
+                        <select 
+                        onChange={(e) => {
+                            history.push(`/search?query=${query}&page=${e.target.value}`)
+                        }}
+                        id="page" 
+                        name="page">
+                            {totalResultsArr.map((pageNum, index) => {
+                                if (page === pageNum.toString())
+                                    return (<option value={pageNum} selected>{pageNum}</option>)
+                                else
+                                    return (<option value={pageNum}>{pageNum}</option>)
+                            })}
+                        </select>
+                    </div>
+                </div>   
             }
+
             {results.length > 0 ? results.map((movie, index) => (
                 <div className="movieTitle-card" onClick={() => {
                     setMovieID(movie.imdbID)
@@ -80,10 +83,11 @@ export const SearchResults = () => {
                     <div className="movieTitle">{movie.Title} ({movie.Year})</div>
                 </div>
             )) : 
-            <div className="noresults-div">
-                No movie results found for title: "{query}"
-            </div>
+                <div className="noresults-div">
+                    No movie results found for title: "{query}"
+                </div>
             }
+
             <MovieInfo 
                 movieID={activeMovieID}
                 show={modalShow}

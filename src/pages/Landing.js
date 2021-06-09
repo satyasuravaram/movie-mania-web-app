@@ -5,12 +5,10 @@ import './Landing.css'
 export const Landing = () => {
     return (
         <div className="landing-container">
-            <div className="landing-header">
+            <h1 className="landing-header">
                 Learn more about your favorite movies
-            </div>
-            <div>
-                <SearchBar />
-            </div>
+            </h1>
+            <SearchBar />
         </div>
         
     )
